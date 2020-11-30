@@ -1,7 +1,7 @@
 .loginPanel {
-    display: flex;
-    width: 70vw;
-    height: 70vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 75%;
     background-color: white;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
@@ -9,11 +9,11 @@
 .login_logo {
     width: 100%;
     display: flex;
+    border-bottom: 1px solid #cacaca;
     align-items: center;
 }
 
 .login_header {
-    /* display: flex; */
     align-items: center;
 }
 
@@ -21,22 +21,12 @@
     display: flex;
 }
 
-.login_form {
-    display: grid;
-}
-.login_footer {
-  position: absolute;
-  bottom: 0;
-}
-
 .panel_left {
-    height: 100%;
-    width: 50%;
+    margin: 2em;
     background-color: white;
 }
 
 .panel_right {
-    width: 50%;
     background-size: cover;
     background-image: url('../images/background_login.jpg');
 }
@@ -60,6 +50,7 @@
 
 .btn_facebook {
     color: white;
+    cursor: pointer;
     background-color: #4267B2;
 }
 
