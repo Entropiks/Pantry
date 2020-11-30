@@ -1,7 +1,7 @@
 .loginPanel {
     display: flex;
-    width: 75vw;
-    height: 75vh;
+    width: 70vw;
+    height: 70vh;
     background-color: white;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
@@ -25,8 +25,8 @@
     display: grid;
 }
 .login_footer {
-    position: absolute;
-    bottom: 0
+  position: absolute;
+  bottom: 0;
 }
 
 .panel_left {
