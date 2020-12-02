@@ -49,6 +49,7 @@
 }
 
 .btn_facebook {
+  border-radius: 4px;
     color: white;
     cursor: pointer;
     background-color: #4267B2;

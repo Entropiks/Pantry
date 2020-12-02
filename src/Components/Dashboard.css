@@ -1,0 +1,5 @@
+.dash_wrapper {
+  display: grid;
+  place-items: center;
+  background-image: url('./images/background_swirl.svg');
+}
