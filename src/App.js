@@ -1,13 +1,18 @@
 import './App.css';
-import Login from './Components/Login'
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import Login from './Components/Login';
+import Dash from './Components/Dash';
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-body">
-        <Login />
+    <Router>
+      <div className="App">
+        <div className="App-body">
+          <Route path ="/" exact component={Login} />
+          <Route path ="/dash" component={Dash} />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

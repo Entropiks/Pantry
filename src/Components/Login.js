@@ -16,6 +16,7 @@ function Login() {
       };
 
     return (
+      
         <div className="loginPanel">
           <div class="panel_left">
             <div className="login_logo">
@@ -44,6 +45,7 @@ function Login() {
           
           
       </div>
+  
     );
 }
 
