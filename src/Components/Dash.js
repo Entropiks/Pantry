@@ -5,6 +5,7 @@ function Dash() {
   return (
     <div className="container">
       <h1>Hello</h1>
+      <p>main</p>
     </div>
   )
 }
