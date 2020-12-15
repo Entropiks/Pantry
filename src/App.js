@@ -8,6 +8,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="App-body">
+          { /* move to seperate handler */ }
           <Route path ="/" exact component={Login} />
           <Route path ="/dash" component={Dash} />
         </div>
