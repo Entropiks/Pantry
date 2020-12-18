@@ -1,7 +1,9 @@
 import React from 'react';
 import KitchenIcon from '@material-ui/icons/Kitchen';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import Dash from './Dash';
 // import TextField from '@material-ui/core/TextField';
+import { useHistory } from 'react-router-dom';
 
 import { auth, provider } from '../firebase';
 
@@ -9,10 +11,21 @@ import './Login.css';
 import '../App.css';
 
 function Login() {
+
     const user_login = () => {
       auth.signInWithPopup(provider)
-          .then(result => console.log(result))
-          .catch(error => alert(error.message));
+          .then(function(result) {
+            var token = result.credential.accessToken;
+            var user = result.user;
+            console.log(result);
+          })
+          // .then(result => console.log(result))
+          .catch(error => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            var email = error.email;
+            var credential = error.credential;
+          });
       };
 
     return (
@@ -22,7 +35,6 @@ function Login() {
             <div className="login_logo">
               <KitchenIcon />
               <h2>PANTRY</h2>
-
             </div>
             <div className="login_header">
               <h1>Welcome, Please login or signup for a new account!</h1>
