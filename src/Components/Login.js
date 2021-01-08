@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { useContext, createContext, useState } from 'react';
 import KitchenIcon from '@material-ui/icons/Kitchen';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import Dash from './Dash';
-// import TextField from '@material-ui/core/TextField';
-import { useHistory } from 'react-router-dom';
 
 import { auth, provider } from '../firebase';
 
@@ -26,6 +24,12 @@ function Login() {
             var email = error.email;
             var credential = error.credential;
           });
+          // When user is logged in, redirect to the Dash
+          auth.onAuthStateChanged(user => {
+            if(user) {
+              window.location = 'Dash';
+            }
+          });
       };
 
     return (
@@ -38,7 +42,7 @@ function Login() {
             </div>
             <div className="login_header">
               <h1>Welcome, Please login or signup for a new account!</h1>
-              <btn onClick={user_login} className="btn btn_facebook"><FacebookIcon />Login with Google</btn>&nbsp;
+              <button onClick={user_login} className="btn btn_facebook">Login with Google</button>&nbsp;
             </div>
 
             <div className="login_footer">
