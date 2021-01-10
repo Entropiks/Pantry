@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './Dash.css';
+import MainContent from './MainContent';
+import SideMenu from './SideMenu';
 
 function Dash() {
   return (
@@ -9,15 +11,10 @@ function Dash() {
         { /* Create a Search Component */ }
       </div>
       <div className="sidebar">
-        <ul>
-          <li>Menu Item 1</li>
-          <li>Menu Item 2</li>
-          <li>Menu Item 3</li>
-        </ul>
+        <SideMenu></SideMenu>
       </div>
-      <div className="main">
-        Main
-      </div>
+      <MainContent></MainContent>
+      
       <div className="content1">Content 1</div>
       <div className="content2">Content 2</div>
       <div className="content3">Content 3</div>
@@ -25,4 +22,4 @@ function Dash() {
   )
 }
 
-export default Dash
+export default Dash;
