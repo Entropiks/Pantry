@@ -2,7 +2,9 @@ import React from 'react';
 
 function MainContent() {
   return (
-    <p>This is the main Content</p>
+    <div class="contentWrapper">
+      <p>This is the main Content</p>
+    </div>
   )
 }
 
