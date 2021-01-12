@@ -1,7 +1,7 @@
 .App-body {
   display: grid;
   place-items: center;
-  background-image: url('./images/background_swirl.svg');
+  /* background-image: url('./images/background_swirl.svg'); */
 }
 
 .App {
