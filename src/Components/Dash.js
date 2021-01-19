@@ -3,13 +3,12 @@ import './Dash.css';
 import MainContent from './MainContent';
 import SideMenu from './SideMenu';
 import RecipeCard from './RecipeCard';
+import TopBar from './TopBar';
 
 function Dash() {
   return (
     <div className="container">
-      <div className="topbar">
-        <h2 className="logo">PANTRY</h2>
-      </div>
+      <TopBar></TopBar>
       <div className="sidebar">
         <SideMenu></SideMenu>
       </div>

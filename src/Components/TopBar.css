@@ -1,0 +1,22 @@
+.topbar {
+    grid-area: topbar;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: white;
+    background-color: gray;
+  }
+  .logo {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0em .5em;
+  }
+
+  .icon-wrapper {
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      background-color: red;
+      border-radius: 25px;
+  }
