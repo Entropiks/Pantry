@@ -1,4 +1,19 @@
+
 .container {
+  background-color: rgba(0,0,0,0.1);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 100%;
+  max-width: 75%;
+  border-radius: 5px;
+}
+
+.login_logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+/* .container {
   display: grid;
   height: 100vh;
   width: 100vw;
@@ -23,14 +38,14 @@
   height: 50px;
   color: white;
   background-color: gray;
-}
+} */
 /* .logo {
   align-items: center;
   justify-content: center;
   margin: 0;
   padding: 0em .5em;
 } */
-.search {
+/* .search {
   border-radius: 15px;
   width: 1fr;
 }
@@ -67,4 +82,4 @@
       'content1'
       'content1'
   }
-}
+} */

@@ -1,16 +1,40 @@
+
+.container {
+    background-color: rgba(0,0,0,0.1);
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 100%;
+    max-width: 75%;
+    border-radius: 5px;
+  }
+  
+  .login_logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn_google {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 12px 20px 12px 20px;
+    border: none;
+  }
+
+/* 
 .loginPanel {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     max-width: 75%;
-    background-color: white;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .login_logo {
     width: 100%;
     display: flex;
-    border-bottom: 1px solid #cacaca;
     align-items: center;
+}
+
+.bottom_divider {
+    border-bottom: 1px solid #cacaca;
 }
 
 .login_header {
@@ -23,12 +47,6 @@
 
 .panel_left {
     margin: 2em;
-    background-color: white;
-}
-
-.panel_right {
-    background-size: cover;
-    background-image: url('../images/background_login.jpg');
 }
 
 .login_intro {
@@ -40,7 +58,6 @@
     
     display: flex;
     padding: .5em 1em;
-    /* height: 35px; */
     width: 190px;
 }
 
@@ -57,4 +74,4 @@
 
 .btn_google {
     background-color: #4285F4;
-}
+} */

@@ -1,6 +1,5 @@
 import React, { useContext, createContext, useState } from 'react';
 import KitchenIcon from '@material-ui/icons/Kitchen';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import Dash from './Dash';
 
 import { auth, provider } from '../firebase';
@@ -34,34 +33,18 @@ function Login() {
 
     return (
 
-        <div className="loginPanel">
-          <div class="panel_left">
-            <div className="login_logo">
-              <KitchenIcon />
-              <h2>PANTRY</h2>
-            </div>
-            <div className="login_header">
-              <h1>Welcome, Please login or signup for a new account!</h1>
-              <button onClick={user_login} className="btn btn_facebook">Login with Google</button>&nbsp;
-            </div>
-
-            <div className="login_footer">
-                <p>By signing up, you agree to Pantry's <br></br>Terms and Conditions + Privacy Policy</p>
-            </div>
-        </div>
-
-        <div class="panel_right">
-          <div className="login_intro">
-            <h1>HOW THIS WORKS...</h1>
-            <p>Here's how it works... Create your ingredient / grocery list and we will give you a curated list of meals and snacks you can already make.</p>
-          </div>
-
-
-        </div>
-
-
+      <div className="container">
+      <div className="login_logo">
+        <KitchenIcon></KitchenIcon>
+        <h4>PANTRY</h4>
       </div>
-
+      <div className="startRecipeCard">
+        <h1>Welcome to Pantry!</h1>
+        <p>An app that helps you waste less food by recommending meals, snack etc. using ingredients you already have in your house.</p>
+        <button onClick={user_login} className="btn btn_google">Sign in with Google</button>&nbsp;
+        {/* Input ingredients */}
+      </div>
+    </div>
     );
 }
 
