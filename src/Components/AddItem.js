@@ -23,6 +23,7 @@ class AddItem extends React.Component {
   handleKeyPress(event) {
     if (event.which === 13) {
       this.setState({ value: this.props.predicted });
+      console.log(this);
     }
   }
 
