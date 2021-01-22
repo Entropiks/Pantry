@@ -16,31 +16,11 @@ function Dash() {
       </div>
       <div className="startRecipeCard">
         <h1>What ingredients do you have?</h1>
-        <p>We realize this may take you a few minutes, but trust us - great meal ideas incoming.</p>
+        <p>We realize this may take you a few minutes, but trust us - great meal ideas incoming. We realize this may take you a few minutes, but trust us - great meal ideas incoming.</p>
         <AddItem></AddItem>
         {/* Input ingredients */}
       </div>
     </div>
-    // <div className="container">
-    //   <TopBar></TopBar>
-    //   <div className="sidebar">
-    //     <SideMenu></SideMenu>
-    //   </div>
-    //   <div className="main">
-    //     <MainContent></MainContent>
-    //   </div>
-    
-      
-    //   <div className="content1">
-    //     <RecipeCard></RecipeCard>
-    //   </div>
-    //   <div className="content2">
-    //     <RecipeCard></RecipeCard>
-    //   </div>
-    //   <div className="content3">
-    //     <RecipeCard></RecipeCard>
-    //   </div>
-    // </div>
   )
 }
 
