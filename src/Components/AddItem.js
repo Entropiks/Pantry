@@ -21,11 +21,15 @@ class AddItem extends React.Component {
   }
 
   handleKeyPress(event) {
-    if (event.which === 13) {
+    if (event.which >= 0) {
       this.setState({ value: this.props.predicted });
       console.log(this);
     }
   }
+
+  // Need to create api call to http://www.recipepuppy.com/about/api/
+  // One ingredient -> press enter to add to list
+  // When list has > 1 ingredient, start to render recipes
 
   render() {
     const { active, value, error, label } = this.state;
