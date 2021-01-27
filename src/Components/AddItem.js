@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "react-dom";
-// import { TransitionMotion, spring } from "react-motion";
 import "./AddItem.css";
 
 class AddItem extends React.Component {
@@ -21,10 +20,14 @@ class AddItem extends React.Component {
   }
 
   handleKeyPress(event) {
-    if (event.which >= 0) {
+    if (event.key === 'Enter') {
       this.setState({ value: this.props.predicted });
       console.log(this);
+      
+      var item = (this.state.value);
+      console.log(item);
     }
+
   }
 
   // Need to create api call to http://www.recipepuppy.com/about/api/
