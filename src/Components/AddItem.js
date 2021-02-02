@@ -30,10 +30,6 @@ class AddItem extends React.Component {
 
   }
 
-  // Need to create api call to http://www.recipepuppy.com/about/api/
-  // One ingredient -> press enter to add to list
-  // When list has > 1 ingredient, start to render recipes
-
   render() {
     const { active, value, error, label } = this.state;
     const { predicted, locked } = this.props;
@@ -64,8 +60,6 @@ class AddItem extends React.Component {
   }
 }
 
-export default AddItem;
-
 render(
   <AddItem
     id={1}
@@ -77,4 +71,5 @@ render(
   document.getElementById("root")
 );
 
-// export default AddItem;
+export default AddItem;
+
