@@ -1,13 +1,4 @@
-/* 
-.container {
-    background-color: rgba(0,0,0,0.1);
-    padding: 1em;
-    display: grid;
-    grid-template-columns: 100%;
-    max-width: 60%;
-    border-radius: 5px;
-  } */
-  
+ 
   .login_logo {
     width: 100%;
     display: flex;
@@ -23,61 +14,5 @@
     background-color: rgba(255, 255, 255, 0.3);
     padding: 12px 20px 12px 20px;
     border-radius: 4px;
-    border: none;
+    border: 1px solid black;
   }
-
-/* 
-.loginPanel {
-    display: grid;
-    grid-template-columns: 100%;
-    max-width: 75%;
-}
-
-.login_logo {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.bottom_divider {
-    border-bottom: 1px solid #cacaca;
-}
-
-.login_header {
-    align-items: center;
-}
-
-.login_body {
-    display: flex;
-}
-
-.panel_left {
-    margin: 2em;
-}
-
-.login_intro {
-    color: white;
-    margin: 2em;
-}
-
-.btn {
-    
-    display: flex;
-    padding: .5em 1em;
-    width: 190px;
-}
-
-.btn svg {
-    padding-right: 10px;
-}
-
-.btn_facebook {
-  border-radius: 4px;
-    color: white;
-    cursor: pointer;
-    background-color: #4267B2;
-}
-
-.btn_google {
-    background-color: #4285F4;
-} */

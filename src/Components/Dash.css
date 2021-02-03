@@ -1,19 +1,18 @@
 .container {
-  background-color: rgba(255,255,255,0.2);
-  padding: 1em;
-  border-radius: 5px;
+  padding-bottom: 1em;
 }
 .main_wrapper {
-  max-width: 65%;
+ 
 }
+
 .ingredientWrapper {
   border-radius: 0px 0px 5px 5px;
-  max-width: 90%;
   margin: auto;
   background-color: rgba(0,0,0,0.1);
 }
+
 .ingredientWrapper li {
-  padding: 30px;
+  padding: 10px;
   display: inline-flex;
 }
 .login_logo {
@@ -120,5 +119,3 @@
   opacity: 1;
   pointer-events: none;
 }
-
-/* list */

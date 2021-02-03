@@ -18,4 +18,4 @@ function IngredientList() {
     )
 }
 
-export default IngredientList
+export default IngredientList;
