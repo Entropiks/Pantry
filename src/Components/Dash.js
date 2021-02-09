@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Dash.css';
 import KitchenIcon from '@material-ui/icons/Kitchen';
-import SingleIngredient from './IngredientList';
+import InputItem from './InputItem';
+import db from '../firebase';
 
 function Dash() {
 
   const [recipes, setRecipes] = useState([]);
   const [input, setInput] = useState('');
 
+  // when app loads, listen to server, add and remove. Should go into 'recipes' aove
+  useEffect(() => {
+    db.collection('recipes').onSnapshot(snapshot => {
+      setRecipes(snapshot.docs.map(doc => doc.data().recipe))
+    })
+  }, [input]);
+  
   const addItem = (event) => {
     event.preventDefault();
     setRecipes([...recipes, input]);
@@ -26,21 +34,13 @@ function Dash() {
           <p>We realize this may take you a few minutes, but trust us - great meal ideas incoming. We realize this may take you a few minutes, but trust us - great meal ideas incoming.</p>
           <form>
             <input className="user_input" value={input} onChange={event => setInput(event.target.value)} />
-            <button type="submit" onClick={addItem}>Add</button>
+            <button disabled={!input} type="submit" onClick={addItem} >Add</button>
           </form>
         </div>
       </div>
-      {/* Needs to route item name and info */}
-      {/* <div className="ingredientWrapper">
-        {recipes.map(recipe => (
-          <SingleIngredient>{recipe}</SingleIngredient>
-        ))}
-      </div> */}
       <div className="ingredientWrapper">
         {recipes.map(recipe => (
-          <div className="ingredient_name">
-            <li>{recipe}</li>
-          </div>
+          <InputItem text={recipe}/>
         ))}
       </div>
     </div>

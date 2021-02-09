@@ -5,16 +5,6 @@
  
 }
 
-.ingredientWrapper {
-  border-radius: 0px 0px 5px 5px;
-  margin: auto;
-  background-color: rgba(0,0,0,0.1);
-}
-
-.ingredientWrapper li {
-  padding: 10px;
-  display: inline-flex;
-}
 .login_logo {
   width: 100%;
   display: flex;
