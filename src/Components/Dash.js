@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Dash.css';
 import KitchenIcon from '@material-ui/icons/Kitchen';
 import InputItem from './InputItem';
+
+import firebase from 'firebase';
 import db from '../firebase';
 
 function Dash() {
@@ -9,15 +11,22 @@ function Dash() {
   const [recipes, setRecipes] = useState([]);
   const [input, setInput] = useState('');
 
-  // when app loads, listen to server, add and remove. Should go into 'recipes' aove
+  // when app loads, listen to server, add and remove.
   useEffect(() => {
-    db.collection('recipes').onSnapshot(snapshot => {
+    db.collection('ingredients').onSnapshot(snapshot => {
       setRecipes(snapshot.docs.map(doc => doc.data().recipe))
     })
-  }, [input]);
+  }, []);
   
   const addItem = (event) => {
     event.preventDefault();
+
+    // add to server
+    db.collection('ingredients').add({
+      recipe: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+
     setRecipes([...recipes, input]);
     setInput('');
   }
