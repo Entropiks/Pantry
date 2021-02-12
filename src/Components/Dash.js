@@ -14,7 +14,7 @@ function Dash() {
   // when app loads, listen to server, add and remove.
   useEffect(() => {
     db.collection('ingredients').onSnapshot(snapshot => {
-      setRecipes(snapshot.docs.map(doc => doc.data().recipe))
+      setRecipes(snapshot.docs.map(doc => ({id: doc.id, ingredients: doc.data().recipe})))
     })
   }, []);
   
@@ -49,7 +49,7 @@ function Dash() {
       </div>
       <div className="ingredientWrapper">
         {recipes.map(recipe => (
-          <InputItem text={recipe}/>
+          <InputItem ingredient={recipe}/>
         ))}
       </div>
     </div>

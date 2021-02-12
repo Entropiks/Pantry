@@ -1,18 +1,26 @@
 import React from 'react';
 import icon_flour from '../images/flour.svg';
 import './InputItem.css';
+import db from '../firebase.js';
 
 function InputItem(props) {
+
+    const removeItem = (event) => {
+      event.preventDefault();
+      db.collection("ingredients").doc(props.ingredient.id).delete();
+    }
+
     return (
       <div className="ingredient_wrapper">
         <div className="ingredient_name">
          <img src={icon_flour} />
-         <p>{props.text}</p>
+         <p>{props.ingredient.ingredients}</p>
+         {/* need to switch id for whatever props user text is */}
         <div>
         </div>
         </div>
         <div className="ingredient_actions">
-         <p>X</p>
+         <p onClick={removeItem}>X</p>
         </div>
       </div>
        
