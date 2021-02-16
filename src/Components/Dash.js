@@ -49,7 +49,7 @@ function Dash() {
       </div>
       <div className="ingredientWrapper">
         {recipes.map(recipe => (
-          <InputItem ingredient={recipe}/>
+          <InputItem ingredient={recipe} />
         ))}
       </div>
     </div>

@@ -11,7 +11,7 @@ function InputItem(props) {
     }
 
     return (
-      <div className="ingredient_wrapper">
+      <div key={props.ingredient.id} className="ingredient_wrapper">
         <div className="ingredient_name">
          <img src={icon_flour} />
          <p>{props.ingredient.ingredients}</p>
