@@ -24,11 +24,19 @@ function Login() {
             var credential = error.credential;
           });
           // When user is logged in, redirect to the Dash
-          auth.onAuthStateChanged(user => {
-            if(user) {
-              window.location = 'Dash';
+          // User window location to move user if exists
+          auth.onAuthStateChanged((user) => {
+            if (user) {
+              var uid = user.uid;
+            } else {
+              console.log(uid);
             }
           });
+          // auth.onAuthStateChanged(user => {
+          //   if(user) {
+          //     window.location = 'Dash';
+          //   }
+          // });
       };
 
     return (
