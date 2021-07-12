@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Dash.css';
 import KitchenIcon from '@material-ui/icons/Kitchen';
 import InputItem from './InputItem';
+import RecipeCard from './RecipeCard';
 
 import firebase from 'firebase';
 import db from '../firebase';
@@ -31,6 +32,13 @@ function Dash() {
     setInput('');
   }
 
+  // NEED TO PULL RECIPE LIST INTO ARRAY OR OBJECT
+  // var recipeList = firebase.database().ref('ingredients/recipes');
+  // recipeList.on('value', (snapshot) => {
+  //   const recipeData = snapshot.val();
+  //   console.log(recipeData);
+  // });
+
   return (
     <div className="main_wrapper">
       <div className="container">
@@ -52,6 +60,8 @@ function Dash() {
           <InputItem ingredient={recipe}/>
         ))}
       </div>
+      <h1>Recipes</h1>
+      <RecipeCard/>
     </div>
   )
 }

@@ -1,11 +1,24 @@
+.recipeWrapper {
+  display: flex;
+  width: 200px;
+  height: auto;
+  padding: 0px;
+  
+}
+
+.recipeWrapper img {
+  width: 200px;
+  border-top: 5px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.recipeWrapper h4 {
+  margin: 0px;
+  padding: 5px;
+}
+
 .recipeContent {
-  padding: 0px 15px;
-}
-
-.contentWrapper {
-  border-radius: 10px;
-}
-
-.contentWrapper img {
-  width: 100%;
+  border-radius: 5px;
+  margin: .5em;
+  background-color: #e0e0e0;
 }
